@@ -1,0 +1,343 @@
+.topbar-wrapper {
+    width: 100%;
+    line-height: 40px;
+    height: 40px;
+    background-color: #333333;
+}
+
+.service, .topbar li {
+    float: left;
+}
+
+.shop-cart, .user-info {
+    float: right;
+}
+
+.topbar a {
+    font-size: 12px;
+    display: block;
+    color: #b0b0b0;
+}
+
+.topbar li:hover {
+    color: #fff;
+}
+
+.topbar .line {
+    color: #424242;
+    font-size: 12px;
+    margin: 0 8px;
+}
+
+.app {
+    position: relative;
+
+}
+
+.qrcode {
+    position: absolute;
+    left: -40px;
+    width: 124px;
+    height: 0;
+    overflow: hidden;
+    /*继承了topbar-wrapper中的行高,需要重新设置*/
+    line-height: 1;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    /*height的变化需要0.3s完成*/
+    transition: height 0.3s;
+
+}
+
+.app:hover::after {
+    position: absolute;
+    /*需要有content才有边框*/
+    content: '';
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-bottom-color: white;
+    right: 17px;
+    top: 20px;
+}
+
+.app:hover .qrcode {
+    height: 148px;
+
+
+}
+
+.qrcode img {
+    margin: 17px 17px 5px;
+    width: 90px;
+}
+
+.qrcode span {
+    color: black;
+}
+
+.topbar .user-info {
+    margin-right: 20px;
+}
+
+.shop-cart {
+    position: relative;
+}
+
+.shop-cart a {
+    display: block;
+    width: 120px;
+    background-color: #424242;
+    text-align: center;
+}
+
+.shop-cart:hover a {
+    color: #ff6700;
+}
+
+.shop-cart i {
+    margin-right: 2px;
+}
+
+.car .note {
+    position: absolute;
+    width: 316px;
+    height: 0;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    background-color: white;
+    text-align: center;
+    transition: height .3s;
+    left: -196px;
+}
+
+.shop-cart:hover .note {
+    height: 100px;
+}
+
+.header {
+    height: 100px;
+}
+
+.header .logo {
+    float: left;
+    margin-top: 22px;
+    /*设定容器大小*/
+    width: 55px;
+    height: 55px;
+    position: relative;
+    overflow: hidden;
+    /*将段落首行向左缩进9999px*/
+    text-indent: -9999px;
+}
+
+.header .logo a {
+    position: absolute;
+    /*由于添加了渐变效果,需要设置left初始值*/
+    left: 0;
+    /*a转换为了块元素,需要设置a大小*/
+    width: 55px;
+    height: 55px;
+    background-image: url("../img/mi.jpg");
+    transition: left .3s;
+}
+
+.header .logo .mihome {
+    background-image: url("../img/mihome.png");
+    left: -55px;
+}
+
+.header .logo:hover .mi {
+    left: 55px;
+}
+
+.header .logo:hover .mihome {
+    left: 0;
+}
+
+.header .nav {
+    float: left;
+    width: 850px;
+    height: 100px;
+    line-height: 100px;
+    margin-left: 65px;
+}
+
+.header .nav > li {
+    float: left;
+}
+
+.header li a {
+    display: block;
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+.header li a:hover {
+    color: orange;
+}
+
+.header li .all-goods {
+    visibility: hidden;
+}
+
+.header .all-goods-wrapper {
+    position: relative;
+}
+
+
+.header .search-wrapper {
+    float: right;
+    margin-top: 25px;
+    height: 50px;
+    width: 250px;
+}
+
+.search-wrapper .search-inp {
+    float: right;
+    padding: 0;
+    height: 50px;
+    border: 1px solid rgb(224, 224, 224);
+    width: 180px;
+}
+
+.search-wrapper .search-btn {
+    float: right;
+    height: 52px;
+    width: 52px;
+    padding: 0;
+    border: none;
+}
+
+.left-nav {
+    position: absolute;
+    left: -120px;
+    box-sizing: border-box;
+    width: 234px;
+    height: 460px;
+    padding: 30px 0px;
+    background-color: #333333;
+    z-index: 999;
+}
+
+.header .left-nav a {
+    display: block;
+    height: 42px;
+    line-height: 42px;
+    color: white;
+}
+
+.header .left-nav a:hover {
+    background-color: orange;
+    color: white;
+}
+
+.header .left-nav i {
+    float: right;
+    line-height: 42px;
+}
+
+
+.banner {
+    position: relative;
+    height: 460px;
+}
+
+.banner .img-list li {
+    position: absolute;
+}
+
+.banner img {
+    width: 100%;
+    vertical-align: top;
+}
+
+.banner .pointer {
+    position: absolute;
+    bottom: 10px;
+    right: 35px;
+}
+
+.banner .pointer a {
+    float: right;
+    width: 6px;
+    height: 6px;
+    background-color: rgba(0, 0, 0, 4);
+    margin-left: 6px;
+    border: 3px white solid;
+    border-radius: 50%;
+}
+
+/*box*/
+.box {
+    height: 170px;
+    margin-top: 10px;
+}
+
+.box .box1 {
+    float: left;
+    width: 234px;
+    height: 170px;
+    background-color: gray;
+}
+
+.box .box1 li {
+    float: left;
+    height: 82px;
+    padding: 18px 0 0;
+}
+
+.box .box1 li a {
+    display: block;
+    width: 70px;
+    height: 64px;
+
+}
+
+.box .box1 li img {
+    width: 24px;
+    height: 24px;
+    margin: 0 auto;
+    line-height: 1;
+}
+
+.box .box1 li span {
+    display: block;
+    margin: 0 auto;
+    font-size: 12px;
+}
+
+.box2, .box3, .box4 {
+    height: 170px;
+    margin-left: 42px;
+}
+
+.box .box2, .box3, .box4 li {
+    float: left;
+    width: 300px;
+    height: 170px;
+}
+
+.box .box2, .box3, .box4 a {
+    display: block;
+}
+
+
+.box2 img {
+    width: 300px;
+    height: 170px;
+
+}
+
+.box3 img {
+    width: 300px;
+    height: 170px;
+
+}
+
+.box4 img {
+    width: 300px;
+    height: 170px;
+
+}
